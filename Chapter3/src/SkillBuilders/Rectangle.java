@@ -7,7 +7,6 @@ public class Rectangle {
 
 	public static void main(String[] args) {
 				
-		//
 		Scanner userInput = new Scanner(System.in);
 		//variable input
 		System.out.print("Please enter a length value: ");
