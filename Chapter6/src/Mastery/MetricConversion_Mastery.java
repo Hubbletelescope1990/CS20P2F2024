@@ -3,7 +3,7 @@ package Mastery;
 import java.util.Scanner;
 
 public class MetricConversion_Mastery {
-
+	//Converts inches to centimeters with output statement
 	public static void inchesToCentimeters(double num) {
 		double conversion;
 		
@@ -11,7 +11,7 @@ public class MetricConversion_Mastery {
 		
 		System.out.print(num + " inches is equal to: " + conversion + " centimeters.");
 	}
-	
+	//Converts feet to centimeters with output statement
 	public static void feetTocentimeters(double num) {
 		double conversion;
 		
@@ -19,7 +19,7 @@ public class MetricConversion_Mastery {
 		
 		System.out.print(num + " feet is equal to: " + conversion + " centimeters.");
 	}
-	
+	//Converts yards to meters with output statement
 	public static void yardsToMeters(double num) {
 		double conversion;
 		
@@ -27,7 +27,7 @@ public class MetricConversion_Mastery {
 		
 		System.out.print(num + " yards is equal to: " + conversion + " meters.");
 	}
-	
+	//Converts miles to kilometers with output statement
 	public static void milesToKilometers(double num) {
 		double conversion;
 		
@@ -35,7 +35,7 @@ public class MetricConversion_Mastery {
 		
 		System.out.print(num + " miles is equal to: " + conversion + " kilometers.");
 	}
-	
+	//Reverse conversion, centimeters to inches with output statement
 	public static void centimetersToInches(double num) {
 		double conversion;
 		
@@ -43,7 +43,7 @@ public class MetricConversion_Mastery {
 		
 		System.out.print(num + " centimeters is equal to: " + conversion + " inches.");
 	}
-	
+	//Reverse conversion, centimeters to feet with output statement
 	public static void centimetersToFeet(double num) {
 		double conversion;
 		
@@ -51,7 +51,7 @@ public class MetricConversion_Mastery {
 		
 		System.out.print(num + " centimeters is equal to: " + conversion + " feet.");
 	}
-	
+	//Reverse conversion, meters to yards with output statement
 	public static void metersToYards(double num) {
 		double conversion;
 		
@@ -59,7 +59,7 @@ public class MetricConversion_Mastery {
 		
 		System.out.print(num + " meters is equal to: " + conversion + " yards.");
 	}
-	
+	//Reverse conversion, kilometers to miles with output statement
 	public static void kilometersToMiles(double num) {
 		double conversion;
 		
@@ -67,6 +67,7 @@ public class MetricConversion_Mastery {
 		
 		System.out.print(num + " kilometers is equal to: " + conversion + " miles.");
 	}
+	
 	public static void main(String[] args) {
 
 		Scanner userInput = new Scanner(System.in);
@@ -75,7 +76,7 @@ public class MetricConversion_Mastery {
 		int choice;
 		double number;
 		
-		//User input
+		//Choice display and user input
 		System.out.println("Press 1 for inches to centimeters.");
 		System.out.println("Press 2 for feet to centimeters.");
 		System.out.println("Press 3 for yards to meters.");
@@ -107,7 +108,7 @@ public class MetricConversion_Mastery {
 			metersToYards(number);
 		} else if (choice == 8) {
 			kilometersToMiles(number);
-		} else {
+		} else {//Extra statement if user selected invalid choice
 			System.out.print("Invalid conversion choice.");
 		}
 

@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class PrimeNumber_mastery {
 	//Determine if prime and return true or false depending on answer
 	public static boolean isPrime(int num) {
-		if (num == 2 || num == 3 || num == 5) {
+
+		if (num == 2 || num == 3 || num == 5) {//Initial statement checks if the number is 3, 5, or 2
 			return true;
-		} else if (num % 2 != 0 && num % 3 != 0 && num % 5 != 0) {
+		} else if (num % 2 != 0 && num % 3 != 0 && num % 5 != 0) {//Main prime number test statement
 			return true;
 		} else {
 			return false;

@@ -3,8 +3,10 @@ package Mastery;
 import java.util.Scanner;
 
 public class AddCoins_mastery {
-
-	public static String inchesToCentimeters(int pennies, int dimes, int nickels, int quarters) {
+	//Adds pocket change together into total sum
+	public static String getDollarAmount(int pennies, int dimes, int nickels, int quarters) {
+		
+		//Variable initialization
 		double accuratepennies;
 		double accuratedimes;
 		double accuratenickels;
@@ -12,13 +14,19 @@ public class AddCoins_mastery {
 		double sum;
 		String stringsum;
 		
+		//Converts coins to their actual value in Canadian dollars
 		accuratepennies = pennies * 0.01;
 		accuratedimes = dimes * 0.10;
 		accuratenickels = nickels * 0.05;
 		accuratequarters = quarters * 0.25;
 		
+		//Adds coins together for total sum
 		sum = accuratepennies + accuratedimes + accuratenickels + accuratequarters;
+		
+		//Converts the integer number of the sum into a string and adds the dollar sign
 		stringsum = "$" + String.valueOf(sum);
+		
+		//Return the string statement of the total value of the pocket change
 		return stringsum;
 	}
 
@@ -43,8 +51,10 @@ public class AddCoins_mastery {
 		System.out.print("Enter number of quarters: ");
 		quarters = userInput.nextInt();
 		
-		sum = inchesToCentimeters(pennies, dimes, nickels, quarters);
+		//Method call with variable to store the returned value
+		sum = getDollarAmount(pennies, dimes, nickels, quarters);
 		
+		//output
 		System.out.print("You have: " + sum);
 		
 	}
