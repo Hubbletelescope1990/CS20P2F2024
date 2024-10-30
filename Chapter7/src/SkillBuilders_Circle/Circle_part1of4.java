@@ -1,4 +1,4 @@
-package SkillBuilders;
+package SkillBuilders_Circle;
 //Circle part 1 class
 public class Circle_part1of4 {
 	private static final double PI = 3.14;
