@@ -1,16 +1,17 @@
 package Mastery_MySavings;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class MySavings_Test {
 	
-	MySavings_Mastery bank = new MySavings_Mastery();
+	static MySavings_Mastery bank = new MySavings_Mastery();
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
-		
-
 		Scanner userInput = new Scanner(System.in);
+		DecimalFormat f = new DecimalFormat("0.00");
 		
 		int quit = 0;
 		int initial_penny;
@@ -20,27 +21,6 @@ public class MySavings_Test {
 		int initial_choice;
 		int choice;
 		String total = null;
-		
-		System.out.println("Please create a bank account to begin.");
-		System.out.println("To create a bank account with no money, press 1.");
-		System.out.println("To create a bank account and add money to it, press 2.");
-		System.out.println("");
-		System.out.print("Please enter your prefered option: ");
-		initial_choice = userInput.nextInt();
-		
-		if (initial_choice == 2) {
-			System.out.print("Please enter number of pennies: ");
-			initial_penny = userInput.nextInt();
-			System.out.print("Please enter number of nickels: ");
-			initial_nickel = userInput.nextInt();
-			System.out.print("Please enter number of dimes: ");
-			initial_dime = userInput.nextInt();
-			System.out.print("Please enter number of quarters: ");
-			initial_quarter = userInput.nextInt();
-			MySavings_Mastery bank = new MySavings_Mastery(initial_penny, initial_nickel, initial_dime, initial_quarter);
-		} else {
-			
-		}
 		
 		while (quit != 1) {
 			System.out.println("Welcome to bank account management, please make a selection.");
@@ -62,9 +42,34 @@ public class MySavings_Test {
 				quit = 1;
 			}
 			if (choice == 1) {
-				bank.getTotal();
-				System.out.println(bank.getTotal());
+				System.out.println(f.format(bank.getTotal()));
+				TimeUnit.SECONDS.sleep(3);
 			}
+			if (choice == 2) {
+				bank.addPenny();
+			}
+			if (choice == 3) {
+				bank.addNickel();
+			}
+			if (choice == 4) {
+				bank.addDime();
+			}
+			if (choice == 5) {
+				bank.addQuarter();
+			}
+			if (choice == 6) {
+				bank.removePenny();
+			}
+			if (choice == 7) {
+				bank.removeNickel();
+			}
+			if (choice == 8) {
+				bank.removeDime();
+			}
+			if (choice == 9) {
+				bank.removeQuarter();
+			}
+			
 		}
 	}
 
