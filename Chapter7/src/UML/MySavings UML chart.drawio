@@ -1,0 +1,36 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.6">
+  <diagram name="Page-1" id="VoZAnUqJCcv96w7z3lGD">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5uVdn_Hynp5hRTbX3e6p-1" value="MySavings_Mastery.java" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="280" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5uVdn_Hynp5hRTbX3e6p-2" value="MySavings_test" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="280" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5uVdn_Hynp5hRTbX3e6p-3" value="+total: double" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="90" y="340" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5uVdn_Hynp5hRTbX3e6p-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5uVdn_Hynp5hRTbX3e6p-4" target="5uVdn_Hynp5hRTbX3e6p-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="450" />
+              <mxPoint x="440" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5uVdn_Hynp5hRTbX3e6p-4" value="+MySavings_Mastery(): constructor&lt;div&gt;+getTotal(): double&lt;/div&gt;&lt;div&gt;+addPenny(): void&lt;/div&gt;&lt;div&gt;+addNickel(): void&lt;/div&gt;&lt;div&gt;+addDime(): void&lt;/div&gt;&lt;div&gt;+addQuarter(): void&lt;/div&gt;&lt;div&gt;+removePenny(): void&lt;/div&gt;&lt;div&gt;+removeNickel(): void&lt;/div&gt;&lt;div&gt;+removeDime(): void&lt;/div&gt;&lt;div&gt;+removeQuarter(): void&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="90" y="370" width="290" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="5uVdn_Hynp5hRTbX3e6p-5" value="+main()&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;bank&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="460" y="340" width="260" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="5uVdn_Hynp5hRTbX3e6p-7" value="total = 0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
