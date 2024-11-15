@@ -90,9 +90,11 @@ public class LunchOrder_Mastery {
 		return(burger_string);
 	}
 	//Adds price of all items ordered and returns total
-	public double getCost() {
+	public String getCost() {
 		double total;
+		String total_string;
 		total = burger_number * burger_price + salad_number * salad_price + fries_number * fries_price + soda_number * soda_price;
-		return(total);
+		total_string = "Your order comes to: $" + total;
+		return(total_string);
 	}
 	}
