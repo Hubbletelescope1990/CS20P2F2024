@@ -17,10 +17,10 @@ public class LunchOrder_Mastery {
 	private double soda_carbs;
 	private double soda_fat;
 	private double soda_price;
-	private double burger_number;
-	private double salad_number;
-	private double fries_number;
-	private double soda_number;
+	private int burger_number;
+	private int salad_number;
+	private int fries_number;
+	private int soda_number;
 	
 	//Constructor that initializes food object with the same values as the textbook
 	public LunchOrder_Mastery() {
