@@ -19,15 +19,17 @@ public class CourseGrades_Mastery {
 		int quit = 0;
 		double average[][];
 		
+		//Input number of students and tests
 		System.out.print("Enter number of students: ");
 		student_number = userInput.nextInt();
 		System.out.print("Enter number of tests: ");
 		test_number = userInput.nextInt();
 		System.out.println("");
 		
-		
+		//Object creation using previous input
 		GradeBook_Mastery grades = new GradeBook_Mastery(student_number, test_number);
 		
+		//While loop encasing main code
 		while (quit == 0) {
 			System.out.println("");
 			System.out.println("1: View all grades for all students");
@@ -61,6 +63,7 @@ public class CourseGrades_Mastery {
 				quit = 1;
 			}
 			
+			//Bonus code added for if the input is outside the allowed range
 			if (selection > 5 || selection < 1){
 				System.out.print("Invalid input, please try again");
 				TimeUnit.SECONDS.sleep(2);
