@@ -18,11 +18,21 @@ public class TemperatureAndHumidity {
         //Use your Phidgets 
         while (true) {
         	if (humiditySensor.getHumidity() < 30) {
-        		System.out.println("Humidity: Low humidity, Temperature: " + temperatureSensor.getTemperature() + " °C" );
-                Thread.sleep(150);
+                if (temperatureSensor.getTemperature() > 21) {
+            		System.out.println("Humidity: Low humidity, Temperature: " + temperatureSensor.getTemperature() + " °C" );
+                    Thread.sleep(150);
+                } else {
+            		System.out.println("Humidity: Low humidity, Room is too cold" );
+                    Thread.sleep(150);
+                }
         	} else {
-        		System.out.println("Humidity: " + humiditySensor.getHumidity() + " %RH, Temperature: " + temperatureSensor.getTemperature() + " °C" );
-        		Thread.sleep(150);
+                if (temperatureSensor.getTemperature() > 21) {
+            		System.out.println("Humidity: " + humiditySensor.getHumidity() + ", Temperature: " + temperatureSensor.getTemperature() + " °C" );
+                    Thread.sleep(150);
+                } else {
+            		System.out.println("Humidity: " + humiditySensor.getHumidity() + ", Room is too cold" );
+                    Thread.sleep(150);
+                }
         	}
         }
 
