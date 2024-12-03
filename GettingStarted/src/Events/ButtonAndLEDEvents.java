@@ -9,8 +9,8 @@ public class ButtonAndLEDEvents {
 
 	public static void main(String[] args) throws Exception{
 		
-		int Redcounter = 0;
-		int Greencounter = 0;
+		int redCounter = 0;
+		int greenCounter = 0;
 		int stateGreen = 0;
 		int stateRed = 0;
 		
@@ -62,7 +62,7 @@ public class ButtonAndLEDEvents {
             if(turnRedLEDOn == true){
                 redLED.setState(true);
                 if (stateRed == 0 && stateRed == 0) {
-                    Redcounter += 1;
+                    redCounter += 1;
                 	stateRed = 1;
                 }
             } else {
@@ -73,7 +73,7 @@ public class ButtonAndLEDEvents {
             if(turnGreenLEDOn == true){
                 greenLED.setState(true);
                 if (stateGreen == 0 && stateGreen == 0) {
-                    Greencounter += 1;
+                    greenCounter += 1;
                 	stateGreen = 1;
                 }
             } else {
@@ -81,6 +81,23 @@ public class ButtonAndLEDEvents {
                 stateGreen = 0;
             }
             //Need to test the button counter and setup win condition(number 4)
+            if (greenCounter == 10 || redCounter == 10) {
+            	Thread.sleep(100);
+            	greenLED.setState(false);
+            	redLED.setState(false);
+            	Thread.sleep(1000);
+            	greenLED.setState(true);
+            	redLED.setState(true);
+            	Thread.sleep(1000);
+            	if (greenCounter == 10) {
+            	System.out.print("Green wins!");
+            	}
+            	if (redCounter == 10) {
+                	System.out.print("Red wins!");
+                }
+            	break;
+            }
+
         }
 		
 
