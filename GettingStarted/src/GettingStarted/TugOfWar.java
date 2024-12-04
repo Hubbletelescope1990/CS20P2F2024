@@ -6,17 +6,19 @@ public class TugOfWar {
 
 	public static void main(String[] args) throws Exception {
 		
+		//Variable initialization
 		int stateGreen = 0;
 		int stateRed = 0;
 		int counterRed = 0;
 		int counterGreen = 0;
 		
-
+		//Object creation
 	    DigitalInput redButton = new DigitalInput();
 	    DigitalOutput redLED = new DigitalOutput();
 	    DigitalInput greenButton = new DigitalInput();
 	    DigitalOutput greenLED = new DigitalOutput();
 	    
+	    //Object addressing
 	    redButton.setHubPort(0);
 	    redButton.setIsHubPortDevice(true);
 	    redLED.setHubPort(1);
@@ -26,11 +28,13 @@ public class TugOfWar {
 	    greenLED.setHubPort(4);
 	    greenLED.setIsHubPortDevice(true);
 	    
+	    //Object opening
         redButton.open(1000);
         redLED.open(1000);
         greenButton.open(1000);
         greenLED.open(1000);
-        	    
+        
+        //Main body of code
 	    while (true) {
 	    	if (redButton.getState()) {
                 redLED.setState(true);
@@ -53,6 +57,7 @@ public class TugOfWar {
                 greenLED.setState(false);
 	    		stateGreen = 0;
 	    	}
+	    	//Goes to the win sequence
 	    	if (counterGreen == 10 || counterRed == 10) {
                 Thread.sleep(100);
                 greenLED.setState(false);
@@ -64,6 +69,8 @@ public class TugOfWar {
                 greenLED.setState(false);
                 redLED.setState(false);
                 Thread.sleep(1000);
+                
+                //Checks if green or red won
                 if (counterGreen == 10) {
                 	for (int i = 0; i < 5; i++) {
                         greenLED.setState(true);
@@ -71,9 +78,7 @@ public class TugOfWar {
                         greenLED.setState(false);
                         Thread.sleep(500);
                 	}
-                }
-                
-                if (counterRed == 10) {
+                } else {
                 	for (int i = 0; i < 5; i++) {
                         redLED.setState(true);
                         Thread.sleep(500);
@@ -81,7 +86,7 @@ public class TugOfWar {
                         Thread.sleep(500);
                 	}
                 }
-                break;
+                break;//Ends code to prevent it from running again
 	    	}
 	    }
 
